@@ -1,6 +1,7 @@
 import profilePic from "../assets/raviKumarProfile.jpg";
 import { HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
+import Spline from "@splinetool/react-spline";
 
 const containerVariants = {
     hidden: { opacity: 0, x: -100 },
@@ -23,26 +24,6 @@ const Hero = () => {
             <div className="flex flex-wrap lg:flex-row-reverse">
                 <div className="w-full lg:w-1/2">
                     <div className="flex justify-center lg:p-20">
-                        <motion.div
-                            className="relative rounded-3xl"
-                            animate={{
-                                boxShadow: [
-                                    "0 0 10px #ffffff",
-                                    "0 0 20px #f8f9ff",
-                                    "0 0 30px #fefffa",
-                                    "0 0 20px #fffaf9",
-                                    "0 0 10px #ebebeb"
-                                ]
-                            }}
-                            transition={{
-                                duration: 4,
-                                repeat: Infinity,
-                                repeatType: "loop",
-                                ease: "easeInOut"
-                            }}
-                        >
-                            <div className="absolute inset-0 rounded-3xl blur-md bg-white opacity-40 z-0"></div>
-
                             <motion.img
                                 src={profilePic}
                                 alt="Deepak Kumar"
@@ -55,7 +36,6 @@ const Hero = () => {
                                     ease: "easeInOut",
                                 }}
                             />
-                        </motion.div>
                     </div>
 
                 </div>
